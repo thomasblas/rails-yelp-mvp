@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Restaurant.destroy_all
 puts "Creating restaurants..."
-dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", category: "french" }
-pizza_east = { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", category: "belgian" }
-la_famille = { name: "La Famille", address: "56A Shoreditch High St, London E1 6PQ", category: "belgian" }
-so_good = { name: "So Good", address: "56A Shoreditch High St, London E1 6PQ", category: "belgian" }
-bagels_ma_gueule = { name: "Bagel", address: "56A Shoreditch High St, London E1 6PQ", category: "belgian" }
+dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", phone_number: "0612345678", category: "french" }
+pizza_east = { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", phone_number: "0612345678", category: "belgian" }
+la_famille = { name: "La Famille", address: "56A Shoreditch High St, London E1 6PQ", phone_number: "0612345678", category: "belgian" }
+so_good = { name: "So Good", address: "56A Shoreditch High St, London E1 6PQ", phone_number: "0612345678", category: "belgian" }
+bagels_ma_gueule = { name: "Bagel", address: "56A Shoreditch High St, London E1 6PQ", phone_number: "0612345678", category: "belgian" }
 
 [dishoom, pizza_east, la_famille, so_good, bagels_ma_gueule].each do |attributes|
   restaurant = Restaurant.create!(attributes)
